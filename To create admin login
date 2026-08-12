@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class AdminLogin {
+
+    static final String ADMIN_USERNAME = "admin";
+    static final String ADMIN_PASSWORD = "admin123";
+
+    public static void adminLogin(Scanner sc) {
+
+        System.out.println("\n---------- ADMIN LOGIN ----------");
+
+        System.out.print("Enter Admin Username: ");
+        String username = sc.nextLine();
+
+        System.out.print("Enter Admin Password: ");
+        String password = sc.nextLine();
+
+        if (username.equals(ADMIN_USERNAME) &&
+            password.equals(ADMIN_PASSWORD)) {
+
+            System.out.println("\nAdmin Login Successful!");
+            System.out.println("Welcome Admin!");
+
+            AdminMenu.showMenu(sc);
+
+        } else {
+            System.out.println("\nInvalid Admin Username or Password!");
+        }
+    }
+}
