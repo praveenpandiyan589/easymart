@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Login {
+
+    public static void userLogin(Scanner sc) {
+
+        System.out.println("\n---------- USER LOGIN ----------");
+
+        if (Register.username.equals("")) {
+            System.out.println("No user registered!");
+            System.out.println("Please register first.");
+            return;
+        }
+
+        System.out.print("Enter Username: ");
+        String username = sc.nextLine();
+
+        System.out.print("Enter Password: ");
+        String password = sc.nextLine();
+
+        if (username.equals(Register.username) &&
+            password.equals(Register.password)) {
+
+            System.out.println("\nLogin Successful!");
+            System.out.println("Welcome to EasyMart, " + username + "!");
+
+            UserMenu.showMenu(sc);
+
+        } else {
+            System.out.println("\nInvalid Username or Password!");
+        }
+    }
+}
