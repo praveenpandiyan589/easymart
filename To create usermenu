@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class UserMenu {
+
+    public static void showMenu(Scanner sc) {
+
+        while (true) {
+
+            System.out.println("\n========== EASYMART USER MENU ==========");
+            System.out.println("1. View Products");
+            System.out.println("2. Add to Cart");
+            System.out.println("3. View Cart");
+            System.out.println("4. Logout");
+            System.out.print("Enter your choice: ");
+
+            int choice = sc.nextInt();
+            sc.nextLine();
+
+            switch (choice) {
+
+                case 1:
+                    System.out.println("\nProducts will be displayed here.");
+                    break;
+
+                case 2:
+                    System.out.println("\nProduct added to cart.");
+                    break;
+
+                case 3:
+                    System.out.println("\nYour cart is empty.");
+                    break;
+
+                case 4:
+                    System.out.println("\nUser logged out successfully!");
+                    return;
+
+                default:
+                    System.out.println("\nInvalid choice!");
+            }
+        }
+    }
+}
